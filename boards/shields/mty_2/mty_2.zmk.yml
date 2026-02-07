@@ -1,0 +1,14 @@
+
+file_format: "1"
+id: mty_2
+name: mty_2
+type: shield
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
+siblings:
+  - mty_2_left
+  - mty_2_right
