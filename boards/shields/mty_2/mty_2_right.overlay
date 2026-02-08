@@ -109,6 +109,6 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
 
-		//scroll-layers = <4>;
+	scroll-layers = <4>;
     };
 };
