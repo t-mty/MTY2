@@ -49,6 +49,13 @@
 //        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 //    };
 
+	zip_scroll_scaler_ultra: zip_scroll_scaler_ultra {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>; // 縦・横スクロールの両方に適用
+    };
+
 	trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
@@ -65,9 +72,10 @@
 			//	<&zip_scroll_scaler 1 128>,
 			//	<&zip_xy_scaler 1 1>;
 			input-processors =
-                <&zip_xy_scaler 1 16>, 
                 <&zip_xy_to_scroll_mapper>,
-                <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>;
+                <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
+                <&zip_scroll_scaler_ultra 1 64>;
+				//<&zip_xy_scaler 1 16>;
         };
     };
 };
