@@ -49,11 +49,18 @@
 //        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 //    };
 
-	zip_scroll_scaler_ultra: zip_scroll_scaler_ultra {
+	zip_xy_scaler_scroll: zip_xy_scaler_scroll {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
         type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>; // 縦・横スクロールの両方に適用
+        codes = <INPUT_REL_X INPUT_REL_Y>;
+    };
+
+	zip_scroll_scaler_custom: zip_scroll_scaler_custom {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
     };
 
 	trackball_listener: trackball_listener {
@@ -72,9 +79,10 @@
 			//	<&zip_scroll_scaler 1 128>,
 			//	<&zip_xy_scaler 1 1>;
 			input-processors =
+				<&zip_xy_scaler_scroll 1 4>,
                 <&zip_xy_to_scroll_mapper>,
                 <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
-                <&zip_scroll_scaler_ultra 1 64>;
+				<&zip_scroll_scaler_custom 1 2>;
 				//<&zip_xy_scaler 1 16>;
         };
     };
