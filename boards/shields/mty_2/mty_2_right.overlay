@@ -48,9 +48,8 @@
 //        device = <&trackball>;
 //        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 //    };
-//};
 
-    trackball_listener: trackball_listener {
+	trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = 
@@ -68,7 +67,6 @@
         };
     };
 };
-
 
 &physical_layout0 {
     kscan = <&kscan0>;
@@ -109,6 +107,6 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
 
-	//scroll-layers = <4>;
+	scroll-layers = <4>;
     };
 };
