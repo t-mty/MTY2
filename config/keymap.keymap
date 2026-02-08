@@ -43,13 +43,16 @@
             >;
         };
 
-        layer_4 {
+        layer_scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans  &trans          &trans  &trans
 &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans          &trans  &trans  &trans  &kp LEFT_SHIFT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans  &trans          &trans  &trans
                         &trans  &trans          &kp LEFT_SHIFT  &trans
             >;
+            sensor-bindings =
+                <&mouse_scrl SCRL_DOWN SCRL_UP>,
+                <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
     };
 };
