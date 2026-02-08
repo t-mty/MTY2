@@ -49,14 +49,7 @@
 //        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 //    };
 
-	zip_xy_scaler_scroll: zip_xy_scaler_scroll {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_X INPUT_REL_Y>;
-    };
-
-	zip_scroll_scaler_custom: zip_scroll_scaler_custom {
+	zip_scroll_scaler_fine: zip_scroll_scaler_fine {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
         type = <INPUT_EV_REL>;
@@ -79,11 +72,10 @@
 			//	<&zip_scroll_scaler 1 128>,
 			//	<&zip_xy_scaler 1 1>;
 			input-processors =
-				<&zip_xy_scaler_scroll 1 16>,
+                <&zip_xy_scaler 1 2>,
                 <&zip_xy_to_scroll_mapper>,
                 <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
-				<&zip_scroll_scaler_custom 1 2>;
-				//<&zip_xy_scaler 1 16>;
+                <&zip_scroll_scaler_fine 1 24>;
         };
     };
 };
