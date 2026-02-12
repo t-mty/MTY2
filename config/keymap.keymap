@@ -9,14 +9,14 @@
 
 / {
     behaviors {
-//        mouse_scrl: mouse_wheel_scrl {
-//            compatible = "zmk,behavior-sensor-rotate-var";
-//            #sensor-binding-cells = <2>;
-//            bindings = <&msc>, <&msc>;
-//
-//            tap-ms = <10>;
-//        };
-        
+        //        mouse_scrl: mouse_wheel_scrl {
+        //            compatible = "zmk,behavior-sensor-rotate-var";
+        //            #sensor-binding-cells = <2>;
+        //            bindings = <&msc>, <&msc>;
+        //
+        //            tap-ms = <10>;
+        //        };
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -32,7 +32,7 @@
         layer_0 {
             bindings = <
 &kp ESCAPE  &kp Q  &kp W  &kp E         &kp R                     &kp T        &kp Y                    &kp U  &kp I      &kp O       &kp P        &kp DELETE
-&kp TAB     &kp A  &kp S  &lt 4 D       &lt 3 F                   &lt 2 G      &kp H                    &kp J  &kp K      &kp L       &lt 4 MINUS  &kp BACKSPACE
+&kp TAB     &kp A  &kp S  &lt 0 D       &lt 3 F                   &lt 2 G      &kp H                    &kp J  &kp K      &kp L       &lt 0 MINUS  &kp BACKSPACE
 &kp LCTRL   &kp Z  &kp X  &kp C         &kp V                     &kp B        &kp N                    &kp M  &kp COMMA  &kp PERIOD  &lt 1 SLASH  &kp ENTER
                           &kp LEFT_WIN  &mt LEFT_ALT EXCLAMATION  &lt 1 SPACE  &mt LEFT_SHIFT CAPSLOCK
             >;
@@ -41,7 +41,7 @@
         layer_1 {
             bindings = <
 &kp LC(LS(T))  &kp LC(W)  &kp LC(T)  &kp LC(LS(TAB))  &kp LC(TAB)     &kp LG(LS(S))  &kp LC(X)  &kp LA(LEFT)  &mkp MCLK  &kp LA(RIGHT)  &kp LC(MINUS)  &kp LC(EQUAL)
-&kp TAB        &kp LC(A)  &kp LC(S)  &mo 4            &kp LEFT_SHIFT  &kp LCTRL      &kp LC(C)  &mkp LCLK     &kp UP     &mkp RCLK      &mo 4          &kp BACKSPACE
+&kp TAB        &kp LC(A)  &kp LC(S)  &mo 0            &kp LEFT_SHIFT  &kp LCTRL      &kp LC(C)  &mkp LCLK     &kp UP     &mkp RCLK      &mo 0          &kp BACKSPACE
 &kp LC(LS(Z))  &kp LC(Z)  &none      &none            &none           &none          &kp LC(V)  &kp LEFT      &kp DOWN   &kp RIGHT      &none          &kp ENTER
                                      &none            &none           &none          &kp LG(V)
             >;
@@ -62,15 +62,6 @@
 &none   &none   &none   &none    &none    &none      &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS   &kp BACKSPACE
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12    &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH   &kp ENTER
                         &none    &none    &kp SPACE  &kp NUMBER_0
-            >;
-        };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans  &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &trans          &trans  &trans  &trans  &kp LEFT_SHIFT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans  &trans          &trans  &trans
-                        &trans  &trans          &kp LEFT_SHIFT  &trans
             >;
         };
 
