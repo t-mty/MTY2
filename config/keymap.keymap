@@ -5,13 +5,13 @@
 
 / {
     behaviors {
-                mouse_scrl: mouse_wheel_scrl {
-                    compatible = "zmk,behavior-sensor-rotate-var";
-                    #sensor-binding-cells = <2>;
-                    bindings = <&msc>, <&msc>;
-        
-                    tap-ms = <10>;
-                };
+        mouse_scrl: mouse_wheel_scrl {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <10>;
+        };
 
         //scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
         //    compatible = "zmk,behavior-sensor-rotate";
@@ -28,7 +28,7 @@
         layer_0 {
             bindings = <
 &kp ESCAPE  &kp Q  &kp W  &kp E         &kp R                     &kp T        &kp Y                    &kp U  &kp I      &kp O       &kp P        &kp DELETE
-&kp TAB     &kp A  &kp S  &lt 0 D       &lt 3 F                   &lt 2 G      &kp H                    &kp J  &kp K      &kp L       &lt 0 MINUS  &kp BACKSPACE
+&kp TAB     &kp A  &kp S  &lt 4 D       &lt 3 F                   &lt 2 G      &kp H                    &kp J  &kp K      &kp L       &lt 4 MINUS  &kp BACKSPACE
 &kp LCTRL   &kp Z  &kp X  &kp C         &kp V                     &kp B        &kp N                    &kp M  &kp COMMA  &kp PERIOD  &lt 1 SLASH  &kp ENTER
                           &kp LEFT_WIN  &mt LEFT_ALT EXCLAMATION  &lt 1 SPACE  &mt LEFT_SHIFT CAPSLOCK
             >;
@@ -68,10 +68,12 @@
 &trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans  &trans          &trans  &trans
                         &trans  &trans          &kp LEFT_SHIFT  &trans
             >;
+
             sensor-bindings =
                 <&mouse_scrl SCRL_DOWN SCRL_UP>,
                 <&mouse_scrl SCRL_UP SCRL_DOWN>;
-            };
         };
     };
+};
+
 };
