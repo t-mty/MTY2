@@ -49,6 +49,16 @@
 		//input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 	// };
 
+	zip_xy_to_scroll_wheel: zip_xy_to_scroll_wheel {
+        compatible = "zmk,input-processor-xy-to-scroll-wheel";
+        #input-processor-cells = <0>;
+    };
+
+    zip_xy_scaler: zip_xy_scaler {
+        compatible = "zmk,input-processor-xy-scaler";
+        #input-processor-cells = <2>;
+    };
+
 	/* トラックボールの動きを監視して、特定のレイヤーでスクロールに変換する設定 */
     trackball_listener {
         compatible = "zmk,input-listener";
