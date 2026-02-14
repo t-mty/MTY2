@@ -12,3 +12,13 @@ config ZMK_SPLIT
     default y
 
 endif
+
+if ZMK_KEYBOARD_YOUR_KEYBOARD
+
+config ZMK_POINTING
+    default y
+
+config PAW3222
+    default y
+
+endif
