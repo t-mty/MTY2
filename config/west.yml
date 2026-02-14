@@ -1,33 +1,33 @@
-# manifest:
+ manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: sekigon-gonnoc
+      url-base: https://github.com/sekigon-gonnoc
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: f9400030507a2a16d8200ed4361596c06a378241
+      import: app/west.yml
+    - name: zmk-driver-paw3222
+      remote: sekigon-gonnoc
+      revision: main
+  self:
+    path: config
+
+#manifest:
 #  remotes:
 #    - name: zmkfirmware
 #      url-base: https://github.com/zmkfirmware
-#    - name: sekigon-gonnoc
-#      url-base: https://github.com/sekigon-gonnoc
+#    - name: nuovotaka
+#      url-base: https://github.com/nuovotaka
 #  projects:
 #    - name: zmk
 #      remote: zmkfirmware
 #      revision: main
 #      import: app/west.yml
-#    - name: zmk-driver-paw3222
-#      remote: sekigon-gonnoc
+#    - name: zmk-driver-paw3222-alpha
+#      remote: nuovotaka
 #      revision: main
 #  self:
 #    path: config
-
-manifest:
-  remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: nuovotaka
-      url-base: https://github.com/nuovotaka
-  projects:
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
-      import: app/west.yml
-    - name: zmk-driver-paw3222-alpha
-      remote: nuovotaka
-      revision: main
-  self:
-    path: config
