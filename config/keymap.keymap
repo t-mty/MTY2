@@ -29,7 +29,7 @@
         layer_1 {
             bindings = <
 &kp LC(LS(T))  &kp LC(W)  &kp LC(T)  &kp LC(LS(TAB))  &kp LC(TAB)     &kp LG(LS(S))  &kp LC(X)  &kp LA(LEFT)  &mkp MCLK  &kp LA(RIGHT)  &kp LC(MINUS)  &kp LC(EQUAL)
-&kp TAB        &kp LC(A)  &kp LC(S)  &mo 0            &kp LEFT_SHIFT  &kp LCTRL      &kp LC(C)  &mkp LCLK     &kp UP     &mkp RCLK      &mo 0          &kp BACKSPACE
+&kp TAB        &kp LC(A)  &kp LC(S)  &mo 4            &kp LEFT_SHIFT  &kp LCTRL      &kp LC(C)  &mkp LCLK     &kp UP     &mkp RCLK      &mo 4          &kp BACKSPACE
 &kp LC(LS(Z))  &kp LC(Z)  &none      &none            &none           &none          &kp LC(V)  &kp LEFT      &kp DOWN   &kp RIGHT      &none          &kp ENTER
                                      &none            &none           &none          &kp LG(V)
             >;
@@ -60,6 +60,7 @@
 &trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans  &trans          &trans  &trans
                         &trans  &trans          &kp LEFT_SHIFT  &trans
             >;
+
             sensor-bindings =
                 <&mouse_scrl SCRL_DOWN SCRL_UP>,
                 <&mouse_scrl SCRL_UP SCRL_DOWN>;
