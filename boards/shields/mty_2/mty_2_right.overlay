@@ -51,14 +51,14 @@
 		<&zip_x_scaler 1 3>, 
 		<&zip_y_scaler 1 1>;
 
-		scroll {
-            layers = <5>;
-            input-processors =
-                <&zip_xy_to_scroll_mapper>,
-                <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
-		<&zip_scroll_scaler 1 1>,
-		<&zip_xy_scaler 1 1>;
-        };
+//		scroll {
+//            layers = <5>;
+//            input-processors =
+//                <&zip_xy_to_scroll_mapper>,
+//                <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT)>,
+//		<&zip_scroll_scaler 1 1>,
+//		<&zip_xy_scaler 1 1>;
+//        };
     };
 };
 
@@ -102,5 +102,14 @@
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
 
 		scroll-layers = <4>;
+		res-cpi = <800>;           // 基本の解像度
+        
+        /* スクロール速度の調整（ここが本番！） */
+        scroll-tick = <10>;        // デフォルトより小さくすると「爆速」になります
+                                   // 逆に「カクカクしすぎて使いにくい」なら数値を大きく（20など）します
+
+        /* 精密スクロール（スナイプ）の設定 */
+        // scroll-snipe-layers = <2>; // レイヤー2ではもっとゆっくり動かす
+        // scroll-snipe-divisor = <4>; // 動きを4分の1にして、超精密に
     };
 };
