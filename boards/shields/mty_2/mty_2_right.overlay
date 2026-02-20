@@ -102,7 +102,7 @@
         irq-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
 
 		scroll-layers = <4>;
-		res-cpi = <1200>;           // 基本の解像度
+		res-cpi = <2400>;           // 基本の解像度
         
         /* スクロール速度の調整（ここが本番！） */
         scroll-tick = <8>;        // デフォルトより小さくすると「爆速」になります
