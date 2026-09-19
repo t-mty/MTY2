@@ -19,19 +19,19 @@
 
         layer_0 {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E         &kp R                     &kp T        &kp Y                    &kp U  &kp I      &kp O       &lt 1 P      &kp DELETE
-&kp TAB     &kp A  &kp S  &lt 4 D       &lt 3 F                   &lt 2 G      &kp H                    &kp J  &kp K      &kp L       &lt 4 MINUS  &kp BACKSPACE
-&kp LCTRL   &kp Z  &kp X  &kp C         &kp V                     &kp B        &kp N                    &kp M  &kp COMMA  &kp PERIOD  &lt 1 SLASH  &kp ENTER
-                          &kp LEFT_WIN  &mt LEFT_ALT EXCLAMATION  &lt 1 SPACE  &mt LEFT_SHIFT CAPSLOCK
+&kp Q  &kp W  &kp E    &kp R                    &kp T        &mt LEFT_WIN ESCAPE     &kp DELETE       &kp Y  &kp U  &kp I      &kp O       &kp P
+&kp A  &kp S  &lt 4 D  &lt 3 F                  &lt 2 G      &kp TAB                 &kp QUESTION     &kp H  &kp J  &kp K      &lt 4 L     &kp MINUS
+&kp Z  &kp X  &kp C    &kp V                    &kp B        &kp LCTRL               &kp EXCLAMATION  &kp N  &kp M  &kp COMMA  &kp PERIOD  &lt 1 SLASH
+                       &mt LEFT_SHIFT CAPSLOCK  &lt 1 SPACE  &mt LEFT_ALT BACKSPACE  &kp ENTER
             >;
         };
 
         layer_1 {
             bindings = <
-&kp LC(LS(T))  &kp LC(W)  &kp LC(T)  &kp LC(LS(TAB))  &kp LC(TAB)     &kp LG(LS(S))  &kp LC(X)  &kp LA(LEFT)  &mkp MCLK  &kp LA(RIGHT)  &none  &kp DELETE
-&kp TAB        &kp LC(A)  &kp LC(S)  &mo 4            &kp LEFT_SHIFT  &kp LCTRL      &kp LC(C)  &mkp LCLK     &kp UP     &mkp RCLK      &mo 4  &kp BACKSPACE
-&kp LC(LS(Z))  &kp LC(Z)  &none      &none            &kp LC(MINUS)   &kp LC(EQUAL)  &kp LC(V)  &kp LEFT      &kp DOWN   &kp RIGHT      &none  &kp ENTER
-                                     &none            &none           &none          &kp LG(V)
+&kp LC(LS(T))  &kp LC(W)      &kp LC(T)  &kp LC(LS(TAB))          &kp LC(TAB)    &none                   &none      &kp LC(C)      &kp LA(LEFT)  &mkp MCLK  &kp LA(RIGHT)  &kp LC(V)
+&kp LC(A)      &kp LC(S)      &mo 4      &kp LEFT_SHIFT           &kp LCTRL      &none                   &none      &kp LC(X)      &mkp LCLK     &kp UP     &mkp RCLK      &kp LC(LS(V))
+&kp LC(Z)      &kp LC(LS(Z))  &none      &kp LC(MINUS)            &kp LC(EQUAL)  &none                   &none      &kp LG(LS(S))  &kp LEFT      &kp DOWN   &kp RIGHT      &kp LG(V)
+                                         &mt LEFT_SHIFT CAPSLOCK  &kp SPACE      &mt LEFT_ALT BACKSPACE  &kp ENTER
             >;
         };
 
